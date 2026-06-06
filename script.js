@@ -1410,7 +1410,7 @@ const logos = {
             "napoli": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/SSC_Napoli_2024_%28azure%29.svg/250px-SSC_Napoli_2024_%28azure%29.svg.png",
             "atalanta": "https://upload.wikimedia.org/wikipedia/it/archive/8/81/20190126005333%21Logo_Atalanta_Bergamo.svg",
             "bologna": "https://www.registroaraldicoitaliano.it/wp-content/uploads/2021/11/Bologna-Calcio.png",
-            "roma": "https://cdn.freebiesupply.com/logos/large/2x/roma-3-logo-png-transparent.png",
+            "roma": "https://ssl.gstatic.com/onebox/media/sports/logos/optimized/BQdP4jUBFJfG7U_JBsFIMg_64x64.png",
             "fiorentina": "https://img.uefa.com/imgml/TP/teams/logos/240x240/2613817.png",
             "lazio": "https://upload.wikimedia.org/wikipedia/it/thumb/6/62/Stemma_della_Società_Sportiva_Lazio.svg/1280px-Stemma_della_Società_Sportiva_Lazio.svg.png",
             "como": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Logo_Como_1907_2019.png",
