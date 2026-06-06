@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FootballShirts</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">FOOTBALL<span>SHIRTS</span></a>
+      <!-- Bottone Hamburger -->
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+      <nav class="navbar" id="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="#">Edition Champions League</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <div class="nav-actions">
+          <button class="fas fa-shopping-cart" onclick="toggleCart()">
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>LA TUA PASSIONE, <span>LA TUA MAGLIA</span></h1>
+      <p>Scopri le nuove collezioni</p>
+      <a href="catalogo.html" class="explore-btn">ESPLORA</a>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+<section class="new-arrivals">
+    <section class="filters">
+        <div class="container">
+            <h2>NUOVA COLLEZIONE MONDIALE 2026</h2>
+            <!-- Barra di ricerca Nazione aggiunta qui -->
+            <div class="search-nation-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="nationSearch" placeholder="Scrivi il nome della nazione...">
+            </div>
+            <div class="grid">
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/JZ5757_1_APPAREL_Photography_FrontCenterView_white.jpg?v=1774372369&width=493" alt="Spagna 2026">
+                    <h3>Spagna 2026</h3>
+                    <p>€30.00</p>
+                    <button class='shop'>Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/KD8363_1_APPAREL_Photography_FrontCenterView_white.jpg?v=1774372475&width=493" alt="Germania 2026" >
+                    <h3>Germania 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/image_761374ad-2a69-46d2-a956-8b5518aa5365.jpg?v=1775564053&width=493" alt="Usa 2026">
+                    <h3>Usa 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/image_d7ea4023-4947-435c-80b4-3d65b0200c41.jpg?v=1775564047&width=493" alt="Francia 2026" >
+                    <h3>Francia 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/image_18cabf03-60ed-4291-95ed-52f43da86a62.png?v=1774372557&width=493" alt="Argentina 2026">
+                    <h3>Argentina 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/image_02047e33-3b4e-41f2-869b-ac361dd4b283.jpg?v=1775563958&width=493" alt="Brasile 2026">
+                    <h3>Brasile 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/image_b41e1b9d-c35a-41f0-ab8a-600d81aac26e.jpg?v=1775563951&width=493" alt="Inghilterra 2026">
+                    <h3>Inghilterra 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+                <div class="product">
+                    <img src="https://store.fifa.com/cdn/shop/files/image_0c8a09d2-f012-494a-acd8-524248c421bd.jpg?v=1774372657&width=493" alt="Portogallo 2026">
+                    <h3>Portogallo 2026</h3>
+                    <p>€30.00</p>
+                    <button class="shop">Aggiungi al carrello</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="follow-us">
+        <h2>CONTINUA A SEGUIRCI</h2>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/tuo-profilo" target="_blank">𝕏</a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>FOOTBALLSHIRTS</h3>
+        <ul>
+          <li><a href="#">Chi Siamo</a></li>
+          <li><a href="#">Storia</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Informazioni</h3>
+        <ul>
+          <li><a href="#">Termini e condizioni</a></li>
+          <li><a href="#">Spedizioni</a></li>
+          <li><a href="#">Resi e rimborsi</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contatti</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Napoli</li>
+          <li><i class="fas fa-phone"></i> +39 012 345 6789</li>
+          <li><i class="fas fa-envelope"></i> info@footballshirts.com</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 FootballShirts. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>Carrello Acquisti</h3>
+        <button class="cart-close" onclick="toggleCart()">×</button>
+    </div>
+    <div class="cart-content">
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Il tuo carrello è vuoto</p>
+                <button class="btn btn-primary" onclick="toggleCart()">Continua gli acquisti</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-footer">
+        <div class="cart-total">
+            <div class="total-row">
+                <span>Subtotale:</span>
+                <span id="cartSubtotal">€0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Spedizione:</span>
+                <span>Gratuita</span>
+            </div>
+            <div class="total-row total-final">
+                <span>Totale:</span>
+                <span id="cartTotal">€0.00</span>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-large" id="checkoutBtn" onclick="proceedToCheckout()" disabled>
+            Procedi all'acquisto
+        </button>
+    </div>
+  </div>
+    
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-content checkout-modal">
+        <button class="modal-close" onclick="closeCheckoutModal()">×</button>
+        <div class="checkout-content">
+            <h3>Checkout Sicuro</h3>
+            <div class="checkout-steps">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Contatti</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-title">Spedizione</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-title">Pagamento</span>
+                </div>
+            </div>
+            
+            <form class="checkout-form">
+                <div class="form-section">
+                    <h4>Informazioni di contatto</h4>
+                    <div class="form-row">
+                        <input type="email" placeholder="Indirizzo email" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" placeholder="Numero di telefono" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Indirizzo di spedizione</h4>
+                    <div class="form-row">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="text" placeholder="Cognome" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Indirizzo" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Città" required>
+                        <input type="text" placeholder="CAP" required>
+                    </div>
+                    <div class="form-row">
+                        <select required>
+                            <option value="">Seleziona nazione</option>
+                            <option value="IT">Italia</option>
+                            <option value="DE">Germania</option>
+                            <option value="US">Stati Uniti</option>
+                            <option value="UK">Regno Unito</option>
+                            <option value="FR">Francia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Metodo di pagamento</h4>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="card" checked>
+                            <div class="payment-option">
+                                <span>Carta di credito</span>
+                                <div class="card-icons">💳</div>
+                            </div>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="paypal">
+                            <div class="payment-option">
+                                <span>PayPal</span>
+                                <div class="card-icons">🅿️</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Numero carta" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="MM/AA" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                </div>
+
+                <div class="checkout-summary">
+                    <div class="summary-row">
+                        <span>Subtotale:</span>
+                        <span id="checkoutSubtotal">€0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Spedizione:</span>
+                        <span>Gratuita</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Totale:</span>
+                        <span id="checkoutTotal">€0.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Completa ordine</button>
+            </form>
+        </div>
+    </div>
+  </div>
+  <!-- Overlay -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
