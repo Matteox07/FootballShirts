@@ -1,0 +1,281 @@
+/* ── Design tokens ───────────────────────────────────────────── */
+:root {
+  --primary:       #c0392b;
+  --primary-dark:  #8b1a0f;
+  --primary-mid:   #e74c3c;
+  --jersey-dark:   #96281b;
+  --skin:          #f5c5a3;
+  --skin-dark:     #e8a07a;
+  --skin-outline:  #b86d3d;
+  --hair:          #5d3317;
+  --hair-dark:     #3d1a08;
+  --bg-circle:     #d4471a;
+  --page-bg:       #f0e9e7;
+  --form-bg:       #ffffff;
+  --input-bg:      #fdf8f7;
+  --border:        #e0ccc9;
+  --label:         #c0392b;
+  --text:          #2c1005;
+  --btn-hover:     #a93226;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%; height: 100%;
+}
+body {
+  background-color: var(--page-bg);
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  font-size: 16px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Form shell ──────────────────────────────────────────────── */
+form {
+  display: block;
+  width: min(100%, 400px);
+  max-width: 420px;
+  background-color: var(--form-bg);
+  padding: clamp(1rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: .5em;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ── Avatar container ────────────────────────────────────────── */
+.svgContainer {
+  position: relative;
+  width: 200px; height: 200px;
+  margin: 0 auto 1em;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.svgContainer > div {
+  position: relative; width: 100%; height: 0;
+  overflow: hidden; border-radius: 50%;
+  padding-bottom: 100%;
+}
+.mySVG {
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.svgContainer::after {
+  content: "";
+  position: absolute; top: 0; left: 0; z-index: 10;
+  width: inherit; height: inherit;
+  box-sizing: border-box;
+  border: 2.5px solid var(--primary);
+  border-radius: 50%;
+}
+
+/* ── Form fields ─────────────────────────────────────────────── */
+.inputGroup {
+  margin: 0 0 2em;
+  position: relative;
+}
+.inputGroup:last-of-type { margin-bottom: 0; }
+
+label {
+  display: block;
+  margin: 0 0 12px;
+  font-size: 1.25em;
+  color: var(--label);
+  font-weight: 700;
+}
+
+input[type='email'],
+input[type='text'],
+input[type='password'] {
+  display: block; width: 100%; height: 65px;
+  margin: 0; padding: .875em 1em 0;
+  background-color: var(--input-bg);
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 1.55em; color: var(--text);
+  font-weight: 600; font-family: inherit;
+  transition: box-shadow .2s linear, border-color .25s ease-out;
+}
+input[type='email']:focus,
+input[type='text']:focus,
+input[type='password']:focus {
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  border-color: var(--primary-mid);
+}
+
+button {
+  display: block; width: 100%; height: 65px;
+  margin: 0; padding: .65em 1em 1em;
+  background-color: var(--primary-mid);
+  border: none; border-radius: 4px; box-shadow: none;
+  font-size: 1.55em; color: #fff;
+  font-weight: 700; font-family: inherit;
+  cursor: pointer;
+  transition: background-color .2s ease-out;
+  letter-spacing: .02em;
+}
+button:hover, button:active { background-color: var(--btn-hover); }
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .svgContainer {
+    width: clamp(150px, 34vw, 200px);
+    height: clamp(150px, 34vw, 200px);
+  }
+
+  label {
+    font-size: 1.05rem;
+  }
+
+  input[type='email'],
+  input[type='text'],
+  input[type='password'],
+  button {
+    height: 56px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    align-items: center;
+  }
+
+  form {
+    padding: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .svgContainer {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 0.75rem;
+  }
+
+  .inputGroup {
+    margin-bottom: 1.2rem;
+  }
+
+  label {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  input[type='email'],
+  input[type='text'],
+  input[type='password'] {
+    height: 52px;
+    font-size: 1rem;
+    padding: 0.65em 0.8em 0;
+  }
+
+  button {
+    height: 52px;
+    font-size: 1rem;
+    padding: 0.55em 0.9em 0.9em;
+  }
+
+  #showPasswordToggle {
+    top: 0.15em;
+    padding-left: 1rem;
+  }
+}
+
+/* ── Email placeholder float ─────────────────────────────────── */
+.inputGroup1 .helper {
+  position: absolute; z-index: 1; font-family: inherit;
+}
+.inputGroup1 .helper1 {
+  position: absolute;
+  top: 65%;
+  left: 16px;
+  transform: translateY(-50%);
+  transform-origin: left center;
+  color: var(--label);
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: .55;
+  pointer-events: none;
+  transition: transform .2s ease-out, opacity .2s linear;
+}
+
+.inputGroup1.focusWithText .helper1 {
+  transform: translateY(-140%) scale(.75);
+  opacity: 1;
+}
+
+/* ── Password group ──────────────────────────────────────────── */
+.inputGroup2 input[type="password"] { padding: .4em 1em .5em; }
+.inputGroup2 input[type="text"]     { padding: .025em 1em 0; }
+
+#showPasswordToggle {
+  display: block; padding: 0 0 0 1.45em;
+  position: absolute; top: .25em; right: 0;
+  font-size: 1em; cursor: pointer;
+  user-select: none;
+}
+#showPasswordToggle input {
+  position: absolute; z-index: -1; opacity: 0;
+}
+.indicator {
+  position: absolute; top: 0.2em; left: 5px;
+  height: .85em; width: .85em;
+  background-color: var(--input-bg);
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+}
+.indicator::after {
+  content: "✓";
+  position: absolute; 
+  top: -5px;
+  left: -1px;
+  color: transparent;
+}
+#showPasswordCheck:checked ~ .indicator {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+#showPasswordCheck:checked ~ .indicator::after {
+  color: #ffffff;
+  visibility: visible;
+}
+#showPasswordCheck:focus  ~ .indicator,
+#showPasswordCheck:hover  ~ .indicator { border-color: var(--primary-mid); }
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+  html, body {
+    height: auto !important;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  body {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  form {
+    margin: 0 auto;
+    max-height: none;
+  }
+
+  .svgContainer {
+    flex-shrink: 0;
+  }
+
+}
